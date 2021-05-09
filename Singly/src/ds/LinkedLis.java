@@ -79,6 +79,17 @@ public class  LinkedLis {
        return count;
    }
 
+   public  ListNode deleteFirst(){
+       if(head==null){
+           return null;
+       }
+       ListNode temp=head;
+       head=head.next;
+       temp.next=null;
+       return  temp;
+   }
+
+
     public static void main(String[] args) {
         LinkedLis ls=new LinkedLis();
         ls.head=new ListNode(10);
@@ -97,6 +108,8 @@ public class  LinkedLis {
         ls.insertRear(100);
         ls.print();
         ls.addToIndex(2,1000);
+        ls.print();
+        System.out.println(ls.deleteFirst().data);//printing the removed element
         ls.print();
 
     }
