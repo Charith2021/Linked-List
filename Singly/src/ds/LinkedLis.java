@@ -28,6 +28,29 @@ public class  LinkedLis {
        head=newNode;
    }
 
+   public  void  addToIndex(int position,int value){
+       ListNode node=new ListNode(value);
+
+       if(position==1){
+           node.next=head;
+           head=node;
+       }else {
+           ListNode previous=head;
+           int count=1;//position-1
+
+           while (count < position-1){
+               previous=previous.next;
+               count++;
+           }
+           ListNode current=previous.next;
+           previous.next=node;
+           node.next=current;
+       }
+
+
+   }
+
+
    public  void  insertRear(int value){
        ListNode newNode = new ListNode(value);
        if(head==null){
@@ -72,6 +95,8 @@ public class  LinkedLis {
         ls.insertFront(1);
         ls.print();
         ls.insertRear(100);
+        ls.print();
+        ls.addToIndex(2,1000);
         ls.print();
 
     }
