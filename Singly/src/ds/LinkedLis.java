@@ -89,6 +89,21 @@ public class  LinkedLis {
        return  temp;
    }
 
+   public  ListNode deleteLast(){
+       if(head == null || head.next == null){
+           return  head;
+       }
+       ListNode current =head;
+       ListNode previous=null;
+
+       while (current.next != null){
+           previous=current;
+           current=current.next;
+       }
+       previous.next=null;//to break the chain
+       return  current;
+   }
+
 
     public static void main(String[] args) {
         LinkedLis ls=new LinkedLis();
@@ -110,6 +125,8 @@ public class  LinkedLis {
         ls.addToIndex(2,1000);
         ls.print();
         System.out.println(ls.deleteFirst().data);//printing the removed element
+        ls.print();
+        System.out.println(ls.deleteLast().data);
         ls.print();
 
     }
