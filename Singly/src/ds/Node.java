@@ -1,30 +1,49 @@
 package ds;
 
-public class Node {
-    Node next;
-    int data;
+  public class Node {
+      Node next;
+      int data;
 
-    public Node(int data) {
-        this.data = data;
-    }
-}
-  class LinkedList{
-    Node head;
+      public Node(int data) {
+          this.data = data;
+      }
+  }
 
-    public  void  append(int data){
-        if(head==null){
-            head=new Node(data);
-            return;
+
+
+
+
+
+
+
+
+
+      /*  public void prepend(int data) {
+            Node newHead = new Node(data);
+            head = newHead;
         }
-        Node current=head;
-        while(current.next != null){
-            current=current.next;
+
+        public void deleteWithValue(int data) {
+            if (head == null) return;
+            if (head.data == data) {
+                head = head.next;
+                return;
+                ;
+            }
+            Node current = head;
+            while (current.next != null) {
+                if (current.next == data) {
+                    current.next = current.next.next;
+                    return;
+                }
+                current = current.next;
+            }
         }
-        current.next=new Node(data);
-    }
+    }*/
 
 
 
 
 
-}
+
+
