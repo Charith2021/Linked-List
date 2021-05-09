@@ -13,14 +13,27 @@ public class  LinkedLis {
        }
    }
 
+   public  void  print(){
+       ListNode current=head;
+       while(current != null){
+           System.out.print(current.data+"-->");
+           current=current.next;
+       }
+       System.out.print("null");
+   }
+
     public static void main(String[] args) {
         LinkedLis ls=new LinkedLis();
         ls.head=new ListNode(10);
-        ListNode second = new ListNode(1);
-        ListNode third = new ListNode(8);
-        ListNode fourth = new ListNode(11);
+        ListNode second = new ListNode(20);
+        ListNode third = new ListNode(30);
+        ListNode fourth = new ListNode(40);
 
+        ls.head.next = second;//10 -->20
+        second.next=third;//10 --> 20-->30
+        third.next=fourth;//10-->20-->30-->40-->null
 
+        ls.print();
 
     }
 
