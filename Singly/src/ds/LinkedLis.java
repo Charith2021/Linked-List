@@ -1,44 +1,27 @@
 package ds;
 
 public class  LinkedLis {
-    Node head;
+   private ListNode head;
 
-    public void append(int data) {
-        if (head == null) {
-            head = new Node(data);
-            return;
-        }
-        Node current = head;
-        while (current.next != null) {
-            current = current.next;
-        }
-        current.next = new Node(data);
-    }
+   private static  class ListNode{
+       private  int data;
+       private ListNode next;
 
-    public  void  prepend(int data){
-        Node newHead =new Node(data);
-        newHead.next=head;
-        head=newHead;
-    }
+       public ListNode(int data) {
+           this.data = data;
+           this.next = null;
+       }
+   }
 
-    public  void  deleteWithValue(int data){
-        if(head==null)return;;
-        if(head.data==data){
-            head=head.next;
-            return;
-        }
-        Node current=head;
-        while (current.next != null){
-            if(current.next != null){
-                current.next=current.next.next;
-                return;
-            }
-            current=current.next;
-        }
+    public static void main(String[] args) {
+        LinkedLis ls=new LinkedLis();
+        ls.head=new ListNode(10);
+        ListNode second = new ListNode(1);
+        ListNode third = new ListNode(8);
+        ListNode fourth = new ListNode(11);
+
+
 
     }
-
-
-
 
 }
