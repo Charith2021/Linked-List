@@ -28,6 +28,21 @@ public class  LinkedLis {
        head=newNode;
    }
 
+   public  void  insertRear(int value){
+       ListNode newNode = new ListNode(value);
+       if(head==null){
+           head=newNode;
+           return;
+       }
+       ListNode current=head;
+       while(null != current.next){
+           current=current.next;
+       }
+       current.next=newNode;
+   }
+
+
+
    public  int length(){
        if(head==null){
            return 0;
@@ -55,6 +70,8 @@ public class  LinkedLis {
         ls.print();
         System.out.println("The length is: "+ls.length());
         ls.insertFront(1);
+        ls.print();
+        ls.insertRear(100);
         ls.print();
 
     }
