@@ -15,5 +15,13 @@ public class  LinkedLis {
         current.next = new Node(data);
     }
 
+    public  void  prepend(int data){
+        Node newHead =new Node(data);
+        newHead.next=head;
+        head=newHead;
+    }
+
+
+
 
 }
