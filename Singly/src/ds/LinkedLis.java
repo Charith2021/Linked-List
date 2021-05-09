@@ -19,7 +19,13 @@ public class  LinkedLis {
            System.out.print(current.data+"-->");
            current=current.next;
        }
-       System.out.print("null");
+       System.out.println("null");
+   }
+
+   public void insertFront(int value){
+       ListNode newNode=new ListNode(value);
+       newNode.next = head;
+       head=newNode;
    }
 
    public  int length(){
@@ -48,6 +54,8 @@ public class  LinkedLis {
 
         ls.print();
         System.out.println("The length is: "+ls.length());
+        ls.insertFront(1);
+        ls.print();
 
     }
 
