@@ -13,6 +13,7 @@ public class SinglyTest {
         System.out.println(linkedLis.toString());
         linkedLis.prepend(20);
         System.out.println(linkedLis.toString());
-        //node.deleteWithValue();
+        linkedLis.deleteWithValue(20);
+        System.out.println(linkedLis.toString());
     }
 }
